@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="577.0" prefWidth="761.0" style="-fx-background-color: #fff;">
+         <children>
+            <VBox id="menu_vbox" prefHeight="577.0" prefWidth="258.0" style="-fx-background-color: #EBEBF9;">
+               <children>
+                  <ImageView fitHeight="238.0" fitWidth="376.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/main_icon.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="259.0" text="Homophonic Cipher">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="menuStartBtn" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="64.0" prefWidth="262.0" styleClass="menuStartBtn" stylesheets="@style.css" text="Start Menu">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menu_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="40.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="menuEncryptBtn" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="64.0" prefWidth="259.0" styleClass="menuEncryptBtn" stylesheets="@style.css" text="Encrypt">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/lock_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="40.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="menuDecryptBtn" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="64.0" prefWidth="258.0" styleClass="menuDecryptBtn" stylesheets="@style.css" text="Decrypt">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/unlock_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="40.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="menuAboutBtn" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="64.0" prefWidth="259.0" styleClass="menuDecryptBtn" stylesheets="@style.css" text="About">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/info_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="40.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="258.0" prefHeight="555.0" prefWidth="493.0">
+               <children>
+                  <AnchorPane id="apStart" fx:id="apStart" prefHeight="565.0" prefWidth="502.0">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="55.0" prefHeight="65.0" prefWidth="418.0" text="Homophonic Cipher">
+                           <font>
+                              <Font name="System Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="14.0" layoutY="185.0" prefHeight="380.0" prefWidth="440.0">
+                           <children>
+                              <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="306.0" text="Basic rules of use:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="68.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/rules_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <AnchorPane>
+                                 <children>
+                                    <Label alignment="BASELINE_CENTER" layoutX="21.0" prefHeight="98.0" prefWidth="435.0" text="The supported input alphabet is: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, &quot;SPACE&quot;) " wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="26.0" layoutX="1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="419.0">
+                                       <image>
+                                          <Image url="@../images/dot_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fitHeight="20.0" fitWidth="26.0" layoutX="12.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+                                       <image>
+                                          <Image url="@../images/dot_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="TOP_LEFT" layoutX="22.0" prefHeight="56.0" prefWidth="435.0" text="The key must consist of 9 unique digits in range: 1-9" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="apEncrypt" opacity="0.0" prefHeight="565.0" prefWidth="502.0" visible="false">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="14.0" prefHeight="65.0" prefWidth="405.0" text="Encrypt">
+                           <font>
+                              <Font name="System Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="20.0" layoutY="79.0" prefHeight="486.0" prefWidth="440.0">
+                           <children>
+                              <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="306.0" text="Type text or read file:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="tfTypeE" prefHeight="69.0" prefWidth="440.0" promptText="Type text" scrollLeft="440.0" style="-fx-border-color: #B1ADAB; -fx-border-radius: 5;" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <AnchorPane prefHeight="27.0" prefWidth="440.0">
+                                 <children>
+                                    <Button fx:id="chooseFileBtnE" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="40.0" prefWidth="157.0" styleClass="chooseFileBtnE" stylesheets="@style.css" text="Choose File:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/files_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="5.0" right="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <TextField fx:id="tfFileE" layoutX="165.0" layoutY="8.0" prefHeight="25.0" prefWidth="275.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="66.0" text="Key:">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="tfKeyE" layoutX="66.0" layoutY="16.0" prefHeight="25.0" prefWidth="375.0" />
+                                    <Label fx:id="passInfoE" layoutX="172.0" layoutY="48.0" text="Enter the correct key format" textFill="#d30f0f" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <Button fx:id="encryptBtn" alignment="BASELINE_LEFT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="40.0" prefWidth="130.0" styleClass="encryptBtn" stylesheets="@style.css" text="Encrypt">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/lock_solid.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="306.0" text="Encrypted text:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="tfResultE" prefHeight="69.0" prefWidth="440.0" promptText="Result text" scrollLeft="440.0" style="-fx-border-radius: 5; -fx-border-color: #B1ADAB;" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <Button fx:id="exportBtnE" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="40.0" prefWidth="122.0" styleClass="exportBtnE" stylesheets="@style.css" text="Export ">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/export_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets left="5.0" right="20.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="apDecrypt" opacity="0.0" prefHeight="565.0" prefWidth="502.0" visible="false">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="14.0" prefHeight="65.0" prefWidth="405.0" text="Decrypt">
+                           <font>
+                              <Font name="System Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="20.0" layoutY="79.0" prefHeight="486.0" prefWidth="440.0">
+                           <children>
+                              <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="306.0" text="Type text or read file:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="tfTypeD" prefHeight="69.0" prefWidth="440.0" promptText="Type text" scrollLeft="440.0" style="-fx-border-color: #B1ADAB; -fx-border-radius: 5;" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <AnchorPane prefHeight="27.0" prefWidth="440.0">
+                                 <children>
+                                    <Button fx:id="chooseFileBtnD" alignment="BASELINE_CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="40.0" prefWidth="157.0" styleClass="chooseFileBtnD" stylesheets="@style.css" text="Choose File:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/files_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="5.0" right="20.0" />
+                                       </padding>
+                                    </Button>
+                                    <TextField fx:id="tfFileD" layoutX="165.0" layoutY="8.0" prefHeight="25.0" prefWidth="275.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <AnchorPane>
+                                 <children>
+                                    <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="66.0" text="Key:">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="tfKeyD" layoutX="66.0" layoutY="16.0" prefHeight="25.0" prefWidth="375.0" />
+                                    <Label fx:id="passInfoD" layoutX="173.0" layoutY="48.0" text="Enter the correct key format" textFill="#d30f0f" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <Button fx:id="decryptBtn" alignment="BASELINE_LEFT" contentDisplay="RIGHT" focusTraversable="false" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="40.0" prefWidth="130.0" styleClass="decryptBtn" stylesheets="@style.css" text="Decrypt">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/lock_open.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label alignment="BASELINE_LEFT" prefHeight="56.0" prefWidth="306.0" text="Decrypted text:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="tfResultD" prefHeight="69.0" prefWidth="440.0" promptText="Result text" scrollLeft="440.0" style="-fx-border-radius: 5; -fx-border-color: #B1ADAB;" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <Button fx:id="exportBtnD" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="40.0" prefWidth="122.0" styleClass="exportBtnD" stylesheets="@style.css" text="Export ">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/export_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets left="5.0" right="20.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="apAbout" opacity="0.0" prefHeight="565.0" prefWidth="502.0" visible="false">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="14.0" prefHeight="65.0" prefWidth="405.0" text="About">
+                           <font>
+                              <Font name="System Bold" size="44.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="20.0" layoutY="85.0" prefHeight="486.0" prefWidth="451.0">
+                           <children>
+                              <Label text="Basic info:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Homophonic Cipher it is a simple text encryption program created for study purposes." wrappingWidth="450.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Label text="Basic information about algorithm:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The homophonic cipher is a more advanced version of the substitution algorithm. In this program, for each of the characters from the alphabet, there are 2 to 4 substitutes, among which the given substitutions are randomly selected. Additionally, the set of substitutes depends on the combination created on the basis of the key." wrappingWidth="450.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Label text="Limitations:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The input alphabet is limited to the following characters:: (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, &quot;SPACE&quot;) " wrappingWidth="450.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The key must consist of 9 unique digits in range: 1-9" wrappingWidth="451.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Label text="Author:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Piotr Sobieraj index: 140781" wrappingWidth="450.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Label text="Version:">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1.0" wrappingWidth="450.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright ©. All rights reserved. " wrappingWidth="151.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="300.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <Button id="exitBtn" fx:id="exitBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="443.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="56.0" prefWidth="36.0" styleClass="exitBtn" stylesheets="@style.css" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="12.0">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exit_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
